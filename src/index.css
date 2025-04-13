@@ -1,0 +1,150 @@
+
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 217 33% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 27%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 263 70% 58%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-hrms-dark text-hrms-text font-sans;
+  }
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(90deg, #7C3AED 0%, #8B5CF6 100%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1E293B;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
+
+/* Add purple theme colors */
+.bg-purple-50 {
+  background-color: #F5F3FF;
+}
+
+.bg-purple-100 {
+  background-color: #EDE9FE;
+}
+
+.bg-purple-200 {
+  background-color: #DDD6FE;
+}
+
+.bg-purple-300 {
+  background-color: #C4B5FD;
+}
+
+.bg-purple-400 {
+  background-color: #A78BFA;
+}
+
+.bg-purple-500 {
+  background-color: #8B5CF6;
+}
+
+.bg-purple-600 {
+  background-color: #7C3AED;
+}
+
+.bg-purple-700 {
+  background-color: #6D28D9;
+}
+
+.bg-purple-800 {
+  background-color: #5B21B6;
+}
+
+.bg-purple-900 {
+  background-color: #4C1D95;
+}
+
+.text-purple-50 {
+  color: #F5F3FF;
+}
+
+.text-purple-100 {
+  color: #EDE9FE;
+}
+
+.text-purple-200 {
+  color: #DDD6FE;
+}
+
+.text-purple-300 {
+  color: #C4B5FD;
+}
+
+.text-purple-400 {
+  color: #A78BFA;
+}
+
+.text-purple-500 {
+  color: #8B5CF6;
+}
+
+.text-purple-600 {
+  color: #7C3AED;
+}
+
+.text-purple-700 {
+  color: #6D28D9;
+}
+
+.text-purple-800 {
+  color: #5B21B6;
+}
+
+.text-purple-900 {
+  color: #4C1D95;
+}
