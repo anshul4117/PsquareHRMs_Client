@@ -1,3 +1,3 @@
-const BASE_URL = 'http://localhost:8000/api'
+const BASE_URL = 'https://psquarehrms-server.onrender.com/api'
 
 export default BASE_URL;
