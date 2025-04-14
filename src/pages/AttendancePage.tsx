@@ -52,7 +52,7 @@ const AttendancePage = () => {
 
       setAttendanceData(data);
       setAttendanceStatuses(
-        data.map((a: any) => ({ id: a.id, status: a.status }))
+        data.map((a: any) => ({ id: a._id, status: a.status }))
       );
     } catch (error) {
       console.error('Error fetching attendance data:', error);
@@ -68,7 +68,7 @@ const AttendancePage = () => {
 
     // Optimistically update UI
     setAttendanceStatuses(prev =>
-      prev.map(item => item.id === id ? { ...item, status } : item)
+      prev.map(item => item._id === id ? { ...item, status } : item)
     );
 
     const token = localStorage.getItem('token');
@@ -105,7 +105,9 @@ const AttendancePage = () => {
 
 
   const getStatusForAttendance = (id: string) => {
+    console.log('Getting status for attendance:', id);
     const statusObj = attendanceStatuses.find(item => item.id === id);
+    console.log('Status object:', statusObj);
     return statusObj ? statusObj.status : 'Present';
   };
 
@@ -158,7 +160,7 @@ const AttendancePage = () => {
         </TableHeader>
         <TableBody>
           {attendanceData.map((attendance) => (
-            <TableRow key={attendance.id} className="hover:bg-gray-50">
+            <TableRow key={attendance._id} className="hover:bg-gray-50">
               <TableCell className="py-3 px-4"></TableCell>
               <TableCell className="py-3 px-4 text-gray-800">{attendance.employeeName}</TableCell>
               <TableCell className="py-3 px-4 text-gray-800">{attendance.position}</TableCell>
@@ -166,7 +168,7 @@ const AttendancePage = () => {
               <TableCell className="py-3 px-4 text-gray-800">{attendance.task}</TableCell>
               <TableCell className="py-3 px-4">
                 <Select
-                  value={getStatusForAttendance(attendance.id)}
+                  value={getStatusForAttendance(attendance._id)}
                   onValueChange={(value) => handleStatusChange(attendance._id, value)}
                 >
                   <SelectTrigger className="w-28 h-8 bg-white text-black border-gray-300">
